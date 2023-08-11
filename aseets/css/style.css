@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,700;1,600&display=swap');
+
+:root {
+    --color-body:#b6cbce;
+    --color-headig: #eef3db;
+    --color-base: #0ee1fd;
+    --color-base2:rgb(237, 238, 239);
+    --color-brand:#f43ae7;
+    --color-brand2:#0d0e0d;
+    --sidbar-width: 240px;
+    --font-base: "Bai jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1,h2,h3,h4,h5,h6{
+   color: var(--color-headig); 
+   font-weight: 700;
+}
+h1{
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color:var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover{
+    color: var(--color-brand);
+}
+
+img{
+    width: 100%;
+}
+
+.text-brand{
+    color: #f43ae7;
+}
+p{
+    color: rgb(14, 14, 14);
+    font-size: 20px;
+}
+
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:80px ;
+    padding-bottom: 80px;  
+    border-bottom: 2px solid rgb(232, 238, 241);  
+
+}
+/*navbar*/
+.navbar{
+    background-color: var(--color-brand2);
+}
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover{
+    color:var(--color-brand);
+}
+@media(min-width:992px){
+    .navbar{
+        min-height:100vh;
+        width:var(--sidbar-width);
+        background: linear-gradient(rgb(23, 22, 22, 0.8),rgba(15, 176, 244, 0.8)),url(../img/sidebar2.jpeg);
+        background-size: cover;
+        background-position:center ;
+    }
+
+    .navbar-brand img{
+        border:4px solid #fff;
+    }
+
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+}
+
+
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+    
+}
+.btn-brand{
+    background-color: #e607d7;
+    border-color: #f809e4;
+}
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color:var(--color-brand);
+    color: #fff;
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+    margin-left: 1.5%;
+}
+.link-custom::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f43ae7;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after{
+    width: 100%;
+}
+
+/* services*/
+
+.bg-base{
+    background-color: rgba(15, 176, 244, 0.8);
+}
+
+.shadow-effect{
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover{
+    box-shadow: -6px 6px 10px  #0e0e0e;
+}
+
+.iconbox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: #070707;
+}
+
+.navbar .nav-link.active{
+    color: #f43ae7;
+}
+
+/* card work*/
+.card-custom .card-custom-image{
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img{
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+}
+
+.social-icons{
+
+}
+
+.social-icons a{
+    width: 50px ;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0ee1fd;
+    border-radius: 100px ;
+    font-size: 35px;
+}
+
+
+.view-button {
+    background-color: #f43ae7;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+  }
